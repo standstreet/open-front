@@ -38,15 +38,15 @@ consoleApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     //后面的/index就是你需要的dandelion下index.html作为主页面
     //具体图片显示不出来是因为路径没对 因为在/index中 是被public下的index包裹的
     // 所以你应该把页面想做她是在public的index页面下 然后再来找对应的路径
-    $urlRouterProvider.otherwise('/form');
+    $urlRouterProvider.otherwise('/sidebar');
     $stateProvider
         .state('/', {
             url: '/',
             templateUrl: 'index.html',
             controller:"indexController"
         })
-        .state('form', {
-            url: '/form',
+        .state('sidebar', {
+            url: '/sidebar',
             templateUrl: 'views/nice-admin/index.html',
             controller:"indexController"
         })
@@ -55,14 +55,64 @@ consoleApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
             templateUrl: 'views/home/login.html',
             controller:"loginController"
         })
-        .state('form.component', {
-            url: '/form/component',
+        .state('sidebar.component', {
+            url: '/sidebar/component',
             templateUrl: 'views/nice-admin/form_component.html',
             controller:"indexController"
         })
-        .state('form.validation', {
-            url: '/form/validation',
+        .state('sidebar.validation', {
+            url: '/sidebar/validation',
             templateUrl: 'views/nice-admin/form_validation.html',
+            controller:"indexController"
+        })
+        .state('sidebar.general', {
+            url: '/sidebar/general',
+            templateUrl: 'views/nice-admin/general.html',
+            controller:"indexController"
+        })
+        .state('sidebar.buttons', {
+            url: '/sidebar/buttons',
+            templateUrl: 'views/nice-admin/buttons.html',
+            controller:"indexController"
+        })
+        .state('sidebar.grids', {
+            url: '/sidebar/grids',
+            templateUrl: 'views/nice-admin/grids.html',
+            controller:"indexController"
+        })
+        .state('sidebar.widgets', {
+            url: '/sidebar/widgets',
+            templateUrl: 'views/nice-admin/widgets.html',
+            controller:"indexController"
+        })
+        .state('sidebar.charts', {
+            url: '/sidebar/widgets',
+            templateUrl: 'views/nice-admin/chart-chartjs.html',
+            controller:"indexController"
+        })
+        .state('sidebar.basic-table', {
+            url: '/sidebar/basic-table',
+            templateUrl: 'views/nice-admin/basic_table.html',
+            controller:"indexController"
+        })
+        .state('sidebar.profile', {
+            url: '/sidebar/profile',
+            templateUrl: 'views/nice-admin/profile.html',
+            controller:"indexController"
+        })
+        .state('sidebar.login', {
+            url: '/sidebar/login',
+            templateUrl: 'views/nice-admin/login.html',
+            controller:"indexController"
+        })
+        .state('sidebar.blank', {
+            url: '/sidebar/blank',
+            templateUrl: 'views/nice-admin/blank.html',
+            controller:"indexController"
+        })
+        .state('sidebar.404', {
+            url: '/sidebar/404',
+            templateUrl: 'views/nice-admin/404.html',
             controller:"indexController"
         })
 });

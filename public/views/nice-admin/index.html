@@ -55,7 +55,7 @@
 <!-- task notificatoin start -->
 <li id="task_notificatoin_bar" class="dropdown">
     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="icon-task-l"></i>
+                            <span class="icon-task-l"></span>
                                 <span class="badge bg-important">6</span>
     </a>
     <ul class="dropdown-menu extended tasks-bar">
@@ -312,8 +312,8 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" ui-sref="form.component">Form Elements</a></li>
-                    <li><a class="" ui-sref="form.validation">Form Validation</a></li>
+                    <li><a class="" ui-sref="sidebar.component">Form Elements</a></li>
+                    <li><a class="" ui-sref="sidebar.validation">Form Validation</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
@@ -323,24 +323,28 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="views/nice-admin/general.html">Elements</a></li>
-                    <li><a class="" href="views/nice-admin/buttons.html">Buttons</a></li>
-                    <li><a class="" href="views/nice-admin/grids.html">Grids</a></li>
+                    <li><a class="" ui-sref="sidebar.general">Elements</a></li>
+                    <li><a class="" ui-sref="sidebar.buttons">Buttons</a></li>
+                    <li><a class="" ui-sref="sidebar.grids">Grids</a></li>
                 </ul>
             </li>
-            <li>
-                <a class="" href="views/nice-admin/widgets.html">
+            <li class="sub-menu">
+                <a class="" href="javascript:;">
                     <i class="icon_genius"></i>
                     <span>Widgets</span>
                 </a>
+                <ul class="sub">
+                    <li><a class="" ui-sref="sidebar.widgets">Widgets</a></li>
+                </ul>
             </li>
-            <li>
-                <a class="" href="views/nice-admin/chart-chartjs.html">
+            <li class="sub-menu">
+                <a class="" href="javascript:;">
                     <i class="icon_piechart"></i>
                     <span>Charts</span>
-
                 </a>
-
+                <ul class="sub">
+                    <li><a class="" ui-sref="sidebar.charts">Charts</a></li>
+                </ul>
             </li>
 
             <li class="sub-menu">
@@ -350,7 +354,7 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="views/nice-admin/basic_table.html">Basic Table</a></li>
+                    <li><a class="" ui-sref="sidebar.basic-table">Basic Table</a></li>
                 </ul>
             </li>
 
@@ -361,10 +365,10 @@
                     <span class="menu-arrow arrow_carrot-right"></span>
                 </a>
                 <ul class="sub">
-                    <li><a class="" href="views/nice-admin/profile.html">Profile</a></li>
-                    <li><a class="" href="views/nice-admin/login.html"><span>Login Page</span></a></li>
-                    <li><a class="" href="views/nice-admin/blank.html">Blank Page</a></li>
-                    <li><a class="" href="views/nice-admin/404.html">404 Error</a></li>
+                    <li><a class="" ui-sref="sidebar.profile">Profile</a></li>
+                    <li><a class="" ui-sref="sidebar.login"><span>Login Page</span></a></li>
+                    <li><a class="" ui-sref="sidebar/blank">Blank Page</a></li>
+                    <li><a class="" ui-sref="sidebar/404">404 Error</a></li>
                 </ul>
             </li>
 
@@ -1061,13 +1065,23 @@
 </section>
 <!-- container section start -->
 
+
 <!-- javascripts -->
-<!--<script src="dist/nice-admin/js/jquery.js"></script>-->
+<script src="dist/js/colorpicker.js"></script>
 <script src="dist/nice-admin/js/jquery-ui-1.10.4.min.js"></script>
 <!--<script src="dist/nice-admin/js/jquery-1.8.3.min.js"></script>-->
 <script type="text/javascript" src="dist/nice-admin/js/jquery-ui-1.9.2.custom.min.js"></script>
 <!-- bootstrap -->
 <!--<script src="dist/nice-admin/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="dist/nice-admin/js/ga.js"></script>
+<script src="dist/nice-admin/js/bootstrap-switch.js"></script>
+<script src="dist/nice-admin/js/jquery.tagsinput.js"></script>
+<script src="dist/nice-admin/js/jquery.hotkeys.js"></script>
+<script src="dist/nice-admin/js/bootstrap-wysiwyg.js"></script>
+<script src="dist/nice-admin/js/bootstrap-wysiwyg-custom.js"></script>
+<script type="text/javascript" src="dist/nice-admin/assets/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="dist/nice-admin/js/jquery.validate.min.js"></script>
+
 <!-- nice scroll -->
 <script src="dist/nice-admin/js/jquery.scrollTo.min.js"></script>
 <script src="dist/nice-admin/js/jquery.nicescroll.js" type="text/javascript"></script>
