@@ -38,22 +38,31 @@ consoleApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     //后面的/index就是你需要的dandelion下index.html作为主页面
     //具体图片显示不出来是因为路径没对 因为在/index中 是被public下的index包裹的
     // 所以你应该把页面想做她是在public的index页面下 然后再来找对应的路径
-    $urlRouterProvider.otherwise('/index');
+    $urlRouterProvider.otherwise('/form');
     $stateProvider
         .state('/', {
             url: '/',
             templateUrl: 'index.html',
             controller:"indexController"
         })
-        .state('index', {
-            url: '/index',
+        .state('form', {
+            url: '/form',
             templateUrl: 'views/nice-admin/index.html',
-            //templateUrl: 'views/home/home.html',
             controller:"indexController"
         })
         .state('login', {
             url: '/login',
             templateUrl: 'views/home/login.html',
             controller:"loginController"
+        })
+        .state('form.component', {
+            url: '/form/component',
+            templateUrl: 'views/nice-admin/form_component.html',
+            controller:"indexController"
+        })
+        .state('form.validation', {
+            url: '/form/validation',
+            templateUrl: 'views/nice-admin/form_validation.html',
+            controller:"indexController"
         })
 });
