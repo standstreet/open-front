@@ -1,0 +1,52 @@
+<div class="mid">
+    <div class="appBox">
+        <div class="appBoxHeader">
+            <h2 class="pull-left">我的应用</h2>
+            <div class="createBtn pull-right">
+                <!--<span>你还可以创建7个应用</span>-->
+                <button class="createAppBtn" data-toggle="modal" data-target="#mobileModal" data-backdrop="static">创建应用</button>
+            </div>
+        </div>
+        <div class="appBoxCon" style="margin:20px 0 40px 0 ">
+            <table ng-if="normalApps.length!=0" class="table table-hover app_table" style="border:1px solid #ccc;">
+                <thead>
+                <tr>
+                    <th>应用名称</th>
+                    <th>应用类型</th>
+                    <th>平台类型</th>
+                    <th>描述</th>
+                    <th>图标地址</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="app in normalApps" appId="{{app.id}}" >
+                    <td title="{{app.name}}" ng-if="app.name.length>15">
+                        <a class="appNameLink">{{app.name| limitTo:12 }}...</a>
+                    </td>
+                    <td title="{{app.name}}" ng-if="app.name.length<=15">
+                        <a class="appNameLink">{{app.name}}</a>
+                    </td>
+                    <td ng-cloak class="ng-cloak">{{app.appType}}</td>
+                    <td ng-cloak class="ng-cloak">{{app.platform}}</td>
+                    <td title="{{app.description}}" ng-if="app.description.length>15">{{app.description | limitTo:12 }}...</td>
+                    <td title="{{app.description}}" ng-if="app.description.length<=15">{{app.description}}</td>
+                    <td ng-cloak class="ng-cloak">{{app.icon}}</td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div ng-if="normalApps.length==0" class="alert alert-warning" role="alert">暂时还没有应用</div>
+            <!--<tm-pagination conf="paginationConf"></tm-pagination>-->
+            <div class="page">
+                <!--<div class="pull-right">-->
+                <div>
+                    <pagination boundary-links="true" total-items="totalItems"  ng-model="currentPage" class="pagination-md"
+                                ng-change="pageChanged()" max-size="maxSize" rotate="false"
+                                previous-text="&lsaquo;" next-text="&raquo;" first-text="&laquo;" last-text="&raquo;">
+                    </pagination>
+                    <span class="totalPage" ng-cloak class="ng-cloak">共&nbsp;&nbsp;{{pages}}&nbsp;&nbsp;页，&nbsp;&nbsp;{{allItems}}&nbsp;&nbsp;条</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

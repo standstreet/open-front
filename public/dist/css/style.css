@@ -1,0 +1,81 @@
+.appBoxHeader{height:40px;line-height: 40px;margin:20px 0;}
+.appBoxHeader>h2{font-size: 18px;line-height: 40px;}
+.createAppBtn{width: 168px;height:40px;text-align: center;color:#fff;background-color: #00CCCC;border:0;font-size: 16px;border-radius: 4px;}
+table{border:1px solid #ccc;background-color: #fff;margin-bottom:0;}
+.table{margin-bottom:0;}
+table>thead>tr{background-color: #F4F4F4;height:50px;line-height: 50px;}
+.midMargin{margin:20px 0;}
+.basicTit{background-color: #F4F4F4;height:40px;line-height: 40px;color:#000;font-size: 14px;}
+/*.basicTit>.tit{margin-left:20px;}*/
+.basicTit>button.edit{border:0;background-color: transparent;margin-right:20px;}
+.basicInfo{background-color: #fff;font-size: 14px;font-weight: 400;}
+.basicInfo>.infoLine>label{font-weight: 400;}
+.basicInfo>.infoLine>span{color:#009999;}
+.basicInfo>.infoLine>.iconImg,.basicInfo>.infoLine>.iconImg>img{width:120px;height:120px;}
+.userLevelOperate{height:40px;line-height: 40px;}
+.userLevelOperate>.versionCreateBtn{border:0;width:120px;height:40px;background-color: #CC0099;color:#fff;}
+.page{height:45px;line-height: 45px;background-color: #E8E8E8;}
+.page>.page_list{min-width:300px;}
+.page>.deleteBtn{width: 190px;height:45px;border:0;background-color: #d83d39;color: #fff;text-align: center;font-size: 16px;}
+.pagination{margin:5px;}
+.totalPage{display: inline-block;float: right;margin-right:10px;}
+.basicTit{padding-left:20px;}
+.top_20{margin-top:20px;}
+.basicInfo>.appTip{width:784px;height:58px;padding:10px 0;background-color: #FFFFCC;border:1px solid #ccc;}
+.basicInfo>.appTip>p.warningtxt{display: inline-block;margin-left:5px;width:72%;}
+.transApp{height:140px;}
+.transApp>.sender{text-align: center;}
+.transApp>.sender>p>img{width:120px;height:120px;}
+.AppBirdge>span{color:#F4F4F4;font-size: 100px;margin:0 45px;}
+.transApp>.receiver>.receiverCon{width:465px;height:120px;background-color: #F4F4F4;border:1px solid #E4E4E4;}
+.transApp .transertxt{font-size: 16px;padding:5px 0;}
+.receiver>.receiverCon>.receiverEmail{color:#999999;font-size: 12px;padding:5px 0 10px 8px;}
+.receiver>.receiverCon>.receiverUser>input{width:260px;height:40px;background-color: #fff;border:1px solid #A9A9A9;margin:0 40px 0 8px;}
+.receiver>.receiverCon>.receiverUser>.transBtn{background-color: #00CCCC;width:120px;height:40px;color:#fff;text-align: center;line-height: 40px;border:0;}
+.transApp>.deleteAppBtn{border: 0;width:120px;height:40px;background-color: #FF0000;color:#fff;margin:80px 0 0 40px;}
+
+a.appNameLink,a.appNameLink:hover,a.appNameLink:link,a.appNameLink:active{color:#000;text-decoration: none;}
+a.appNameLink:hover{text-decoration: underline;}
+/**********统计页面样式***************/
+.chooseTime>li{float: left;margin-right:20px;height: 34px;line-height: 34px;}
+.chooseTime>li>a{color:#000;}
+.chooseTime>li>a:hover,.chooseTime>li>a:active,.chooseTime>li>a:link{color:#009999;}
+.chooseTime>li.active>a,.chooseTime>li.active>a:hover,.chooseTime>li.active>a:active,.chooseTime>li.active>a:link{color:#009999;}
+#detailDatas .modal-header{border-bottom:0;margin-bottom:20px;}
+.dataDetailTxt{float: left;display:inline-table;margin-right: 10px;line-height: 34px;}
+.data_input{display: inline-table;float: left;margin-right: 10px;}
+.detailExcelBtn{border:0;width: 120px;height:34px;line-height:34px;color:#fff;background-color: #009966;margin:0;display: inline-table;font-size: 14px;float:left;}
+
+.data_input .input-group-addon{background-color: #fff;}
+.data_input .form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{background-color: #fff;}
+
+.userLevelOperate>ul.nav>li>a{padding:2px 15px;}
+.userLevelOperate>ul.nav-tabs{border:0;}
+.userLevelOperate>ul.nav-tabs>li{margin-right:10px;}
+.userLevelOperate>ul.nav-tabs>li>a{border-radius: 15px;border:0;color:#000;background-color: transparent;}
+.userLevelOperate>ul.nav-tabs>li>a:hover,.userLevelOperate>ul.nav-tabs>li.active>a,.userLevelOperate>ul.nav-tabs>li.active>a:link,
+.userLevelOperate>ul.nav-tabs>li.active>a:hover,.userLevelOperate>ul.nav-tabs>li.active>a:focus{border-radius: 15px;border:0;color:#fff;background-color:#800080; }
+.thead_newTxt{line-height: 40px;display: inline-block;}
+
+
+.search{border:0;width:80px;height:34px;line-height: 34px;background-color: #009999;font-size: 14px;color:#fff;text-align: center;}
+.date{color:#CCCCCC;font-size: 12px;margin-left: 10px;}
+.notice_icon{display:inline-block;background:url("../img/icons.png") no-repeat;width:16px;height:16px;}
+.no_read{background-position:-48px 0;}
+.readed{background-position: -48px -16px;}
+.notice_cation1{width:10px;}
+.notice_cation2{font-weight: 400;}
+#newWholeInput{vertical-align: 8px;margin:0;}
+.news_content{margin:10px 0;}
+.chooseTime{height:auto;overflow: hidden;}
+
+.fill_in{color:#EF5646;}
+.verifyTip_email{text-indent: 20px;font-size: 12px;line-height: 30px;}
+.verifyTip_email>em{font-style: normal;color:#00CCCC;}
+.verifyTip_ps{color:#FF0000;font-size: 12px;text-indent: 20px;line-height: 30px;}
+/*****文档页面******/
+.developing{width:100%;height:100px;margin:100px 0 0 0;/*text-indent: 35%;*/position: relative;}
+.developing>img{position: absolute;left:35%;}
+.developing>span{font-size:0;display: inline-block;width:250px;height:100px;background: url("../img/developingTxt.png") no-repeat top center;position: absolute;top:15px;left:45%;}
+/*******应用详情页面重置按钮样式*********/
+.resetBtn{width: 80px;height: 30px;line-height: 30px;text-align: center;background-color: #00CCCC;color: #fff;font-size: 14px;border:0;margin-left:30px;}

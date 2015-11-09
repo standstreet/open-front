@@ -1,0 +1,35 @@
+{
+    "title": "开放平台接口地址配置文件",
+    "version": "1.0.0",
+    "engine": "mockjs",
+    "rulebase": "./interfaceRules/",
+    "status": "develop",
+    "interfaces": [
+        {
+            "name": "获取普通移动应用下的applist--分页",
+            "id": "normal.appList",
+            "urls": {
+                "test": "http://10.3.30.197:8889/api/v1/developer/:uuid/apps",
+                "develop": "http://10.3.30.17:8889/api/v1/developer/:uuid/apps",
+                "product": "http://172.168.69.5:3355/chop-app/api/v1/developer/:uuid/apps"
+            },
+            "method": "get"
+        },
+        {
+            "name": "用户登陆",
+            "id": "user.login",
+            "urls": {
+                "develop": "http://localhost:8888/standstreet/open/v1/user/login",
+                "product": ""
+            },
+            "method": "post",
+            "contentType":"application/json"
+        }
+    ],
+    "combo": {
+        "getMyData": [
+            "Cart.getCart",
+            "Search.suggest"
+        ]
+    }
+}

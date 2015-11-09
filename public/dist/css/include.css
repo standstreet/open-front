@@ -1,0 +1,87 @@
+.mid{width: 1000px;margin:0 auto;height:auto;zoom:1;}
+/*************************header布局***********************/
+.dropdown-menu{min-width: 100px;}
+/*header{width:100%;height:60px;*/
+    /*background: #124c78;*/
+    /*color:#fff;*/
+    /*filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#8EC6C6', endColorstr='#EAECEC',GradientType='0');  IE6,IE7 ,IE*/
+    /*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#8EC6C6', endColorstr='#EAECEC')";  IE8*/
+    /*background: -moz-linear-gradient(top, #8EC6C6, #EAECEC);  火狐*/
+    /*background: -webkit-gradient(linear, 0 0, 0 100%, from(#8EC6C6), to(#EAECEC));   webkit浏览器*/
+    /*background: -o-linear-gradient(top, #8EC6C6 0%,#EAECEC 100%);Opera*/
+/*}*/
+.menu,.logoArea,.logoArea>.logoImg,.logoArea>.logoTxt,.apps{display: inline-block;float: left;/* vertical-align: middle; */}
+.menu,.loginTab,.apps{line-height: 82px;}
+.apps{margin-right:20px;}
+.loginTab>a,.loginTab>a:hover,.loginTab:active,.loginTab:link,.loginTab>a:visited{color:#fff;}
+.menu-ul>li{float: left;}
+.logoImg{width:158px;height:84px;text-align:center;background:url("../img/newlogo.jpg") no-repeat top center;font-size:0;line-height: 84px;}
+.logoTxt{margin: 0 10px;font-size: 24px;line-height:84px;}
+.menu-ul>li>a,.menu-ul>li>a:hover,.menu-ul>li>a:active,.menu-ul>li>a:link,.user-toggle,.user-toggle:hover,.user-toggle:link,.user-toggle:active,
+/*.dropdown>.dropdown-toggle,.dropdown>.dropdown-toggle:hover,.dropdown>.dropdown-toggle:active,.dropdown>.dropdown-toggle:link{font-size: 18px;color:#fff;padding: 40px 10px 27px 10px;margin: 0 10px;outline:none;}*/
+.menu-ul>li>a:hover,.user-toggle:hover{border-bottom:4px solid #eb584a;background-color: #2a5e86;}
+.menu-ul>li.active>a,.user-toggle.active{border-bottom:4px solid #eb584a;background-color: #2a5e86;}
+.dropdown-menu{margin:0;}
+
+/***************************content 全体布局**************************************/
+.content{width:100%;height:auto;overflow:hidden;min-height:1000px;zoom:1;padding-bottom:40px;}
+/**********************footer布局***********************************************/
+footer{height:214px;overflow: hidden;line-height:50px;font-size: 18px;color:#696969;background: url("../img/footer.png") no-repeat top center;}
+.friendLink{height:38px;line-height: 38px;margin-top:50px;}
+.friendLink>ul{display:inline-block;margin:0 auto;}
+.friendLink>ul>li{float: left;margin:0 5px;}
+.friendLink>ul>li>a,.friendLink>ul>li>a:hover,.friendLink>ul>li>a:active{color:#696969;}
+.friendLink>ul>li>a:hover{text-decoration: underline;}
+.corporation{height:25px;line-height: 25px;}
+.txtCenter{text-align: center;}
+
+/******************************分页********************************/
+.page-list .pagination {float:left;}
+.page-list .pagination span {cursor: pointer;}
+.page-list .pagination .separate span{cursor: default; border-top:none;border-bottom:none;}
+.page-list .pagination .separate span:hover {background: none;}
+.page-list .page-total {float:left; margin: 25px 20px;}
+.page-list .page-total input, .page-list .page-total select{height: 26px; border: 1px solid #ddd;}
+.page-list .page-total input {width: 40px; padding-left:3px;}
+.page-list .page-total select {width: 50px;}
+
+/****************mask 等待*****************/
+#mask {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    filter: alpha(opacity=60);
+    background-color: #777;
+    z-index: 9999999;
+    left: 0px;
+    display: none;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+}
+#mask img {position: absolute;top: 50%;left: 50%;}
+
+/****************应用详情页面--头部下拉菜单布局******************/
+.apps{position: relative;}
+.appSelect{color: #fff;background-color: #124C78;border:0;outline: 0;width: 120px;}
+.appSelect>option{color:#000;background-color: #fff;}
+/***********下拉菜单右侧三角按钮***************/
+.ie10 .select-icon-area{display: none;}
+.select-icon-area{display: inline-block;width:20px;height:84px;background-color: #124C78;position: absolute;top: 0;right: 0;pointer-events: none;}
+.select-icon{display:table-cell;position:absolute;top: 36px;right: 4px;/* width:10px; *//* height:10px; */border-style: solid;content: "";border-width: 10px 5px 0 5px;border-color: #fff transparent transparent transparent;}
+/***************头部及二级导航样式******************/
+.secondNav{height: 40px;line-height: 40px;color:#999;border-bottom:1px solid #E4E4E4;font-size: 15px;}
+.secondNav ul>li{float: left;margin-right:47px;}
+.secondNav ul>li>a{color:#999;}
+.secondNav ul>li>a:hover{color:#5cc8c1;}
+.secondNav ul>li.active>a,.secondNav ul>li.active>a:hover,
+.secondNav ul>li.active>a:active,.secondNav ul>li.active>a:link{color:#5cc8c1;}
+
+/******通知个数样式*********/
+.notice_bell{position: relative;display: inline-block;}
+.new_notice_num{display:inline-block;position:absolute;left: 21px;top: 24px;width: 20px;height: 20px;line-height: 20px;background-color: #eb584a;color:#fff;font-size: 12px;text-align: center;border-radius:50%;font-style: normal;}
+/************头部用户登录样式修改*********************/
+span.header_login_user{color:#e9e9e9;font-size: 20px;}
+.notice_bell>.notice_icon{display:inline-block;background:url("../img/notice.png") no-repeat left bottom;width:30px;height:23px;margin-bottom: -6px;}
+.dropdown-menu{right:0;left:30%;}
+#selectArea{line-height: 80px;}
