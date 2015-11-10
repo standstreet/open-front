@@ -1,9 +1,9 @@
-var consoleApp = angular.module('consoleApp.services', [
+var indexApp = angular.module('indexApp.servicesNew', [
     'ngCookies'
 ]);
 
 /****************************普通移动应用模块*******************************/
-consoleApp.factory("normal", function ($http, $q, $cookies) {
+indexApp.factory("normal", function ($http, $q, $cookies) {
     return {
         //获取普通移动应用下的应用列表；
         getNormalAppList: function (uuid, currentPage, pageSize) {

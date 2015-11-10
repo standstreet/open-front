@@ -4,21 +4,21 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var ejs=require("ejs");//引入ejs模块！
 
 var routes = require('./routes/index');
-var user = require('./routes/user');
-
-
-/********设置nodejs路由对应的文件*************/
-
-var normalApp=require('./routes/normalApp');
-/********设置nodejs路由对应的文件*************/
+var users = require('./routes/users');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+//app.set('view engine', 'ejs');
+//将ejs引擎换为html模板；
+app.engine('.html', ejs.__express);
+app.set('view engine', 'html');
+
+
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -29,18 +29,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 
+//登录拦截器
+app.use(function (req, res, next) {
+  console.log("获取的cookie是： "+req.cookies.userCookie);
+  var url = req.originalUrl;
+  var userCookie=req.cookies.userCookie;
+  if(url=='/login'&&!(userCookie==undefined)){
+    return res.redirect('/');
+  }
+  next();
+});
 
 
-//像后端的controller中的 那个RequestMapping一样
-//这样的工程目录 app.js就像后端的配置文件和tomcat启动合在一个文件的感觉
+
+/**
+ * 配置nodejs端路由
+ */
 app.use('/', routes);
-app.use('/user', user);
-/***********node路由************/
-app.use('/apps',normalApp);
-/***********node路由************/
-
-
-
+app.use('/login', users);
 
 
 

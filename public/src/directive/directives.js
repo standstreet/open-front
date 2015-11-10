@@ -1,7 +1,7 @@
 
-var consoleApp = angular.module('consoleApp.directives', []);
+var indexApp = angular.module('indexApp.directives', []);
 
-consoleApp.directive('getDownLoadUrl', function () {
+indexApp.directive('getDownLoadUrl', function () {
     return {
         restrict: 'AE',
         replace: true,

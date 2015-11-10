@@ -1,0 +1,32 @@
+{
+  "name": "FrontEnd_Angular_Demo",
+  "description": "前端demo_angular",
+  "main": "",
+  "authors": [
+    "leiyao <yao.lei@changhong.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "前端",
+    "angular"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "sweetalert": "~1.1.3",
+    "angular-cookies": "~1.4.7",
+    "angular-ui-bootstrap": "~0.14.3"
+  }
+}

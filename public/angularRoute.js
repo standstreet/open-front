@@ -1,7 +1,8 @@
-var consoleApp=angular.module("consoleApp",[
+var indexApp=angular.module("indexApp",[
     'ui.router',
-    'consoleApp.controllers',
-    'consoleApp.services'
+    'indexApp.controllers',
+    'indexApp.indexService',
+    'indexApp.servicesNew'
 ]);
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
@@ -11,7 +12,7 @@ var consoleApp=angular.module("consoleApp",[
  * @param  {[type]} $stateParams
  * @return {[type]}
  */
-consoleApp.run(function ($rootScope, $state, $stateParams) {
+indexApp.run(function ($rootScope, $state, $stateParams) {
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
 });
@@ -26,7 +27,7 @@ consoleApp.run(function ($rootScope, $state, $stateParams) {
 
 
 
-consoleApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
+indexApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     if (!$httpProvider.defaults.headers.get) {
         $httpProvider.defaults.headers.get = {};
     }
@@ -38,22 +39,17 @@ consoleApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     //后面的/index就是你需要的dandelion下index.html作为主页面
     //具体图片显示不出来是因为路径没对 因为在/index中 是被public下的index包裹的
     // 所以你应该把页面想做她是在public的index页面下 然后再来找对应的路径
-    $urlRouterProvider.otherwise('/sidebar');
+    $urlRouterProvider.otherwise('/');
     $stateProvider
         .state('/', {
             url: '/',
-            templateUrl: 'index.html',
+            templateUrl: '/views/home/home.html',
             controller:"indexController"
         })
         .state('sidebar', {
             url: '/sidebar',
             templateUrl: 'views/nice-admin/index.html',
             controller:"indexController"
-        })
-        .state('login', {
-            url: '/login',
-            templateUrl: 'views/home/login.html',
-            controller:"loginController"
         })
         .state('sidebar.component', {
             url: '/sidebar/component',

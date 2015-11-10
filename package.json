@@ -16,6 +16,7 @@
     "serve-favicon": "~2.3.0",
     "ejs": "~2.1.4",
     "ali-data-mock": "0.1.3",
-    "ali-data-proxy-lite": "1.1.16"
+    "ali-data-proxy-lite": "1.1.16",
+    "crypto":"*"
   }
 }

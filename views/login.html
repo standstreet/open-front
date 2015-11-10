@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="loginApp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creative - Bootstrap 3 Responsive Admin Template">
+    <meta name="author" content="GeeksLabs">
+    <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Login Page 2 | Creative - Bootstrap 3 Responsive Admin Template</title>
+
+    <!-- Bootstrap CSS -->    
+    <link href="/dist/nice-admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap theme -->
+    <link href="/dist/nice-admin/css/bootstrap-theme.css" rel="stylesheet">
+    <!--external css-->
+    <!-- font icon -->
+    <link href="/dist/nice-admin/css/elegant-icons-style.css" rel="stylesheet" />
+    <link href="/dist/nice-admin/css/font-awesome.css" rel="stylesheet" />
+    <!-- Custom styles -->
+    <link href="/dist/nice-admin/css/style.css" rel="stylesheet">
+    <link href="/dist/nice-admin/css/style-responsive.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 -->
+    <!--[if lt IE 9]>
+    <script src="/dist/nice-admin/js/html5shiv.js"></script>
+    <script src="/dist/nice-admin/js/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css" rel="stylesheet">
+        .login-img3-body{
+            background: url('/dist/nice-admin/img/bg-1.jpg') no-repeat center center fixed !important;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+  <body class="login-img3-body" ng-controller="LoginController">
+
+    <div class="container">
+
+      <form class="login-form" ng-submit="login()">
+        <div class="login-wrap">
+            <p class="login-img"><i class="icon_lock_alt"></i></p>
+            <div class="input-group">
+              <span class="input-group-addon"><i class="icon_profile"></i></span>
+              <input type="text" class="form-control" placeholder="Username" autofocus ng-model="user.loginName">
+            </div>
+            <div class="input-group">
+                <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+                <input type="password" class="form-control" placeholder="Password" ng-model="user.password">
+            </div>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <button class="btn btn-info btn-lg btn-block" >Signup</button>
+        </div>
+      </form>
+
+    </div>
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/libs/angular/angular.min.js"></script>
+    <script src="/libs/angular/angular-ui-router.min.js"></script>
+    <script src="/libs/angular/angular-cookies.min.js"></script>
+
+    <script src="/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="/src/controller/LoginController.js"></script>
+    <script src="/src/service/LoginService.js"></script>
+    <script src="/dist/js/util.js"></script>
+  </body>
+</html>
