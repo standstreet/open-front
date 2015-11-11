@@ -13,8 +13,9 @@ loginApp.controller("LoginController",function($scope,$location,$window,user,$co
     }
     $scope.login=function(){
         user.login($scope.user).then(function(data){
-            console.log($cookies.user);
+            console.log("LoginController"+JSON.stringify($cookies.user));
             console.log("LoginController登陆成功！");
+            alert("LoginController.js->登陆成功");
             $window.location="/#/";
         },function(err){
             alert(err.msg);

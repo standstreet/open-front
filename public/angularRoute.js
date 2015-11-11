@@ -1,8 +1,8 @@
 var indexApp=angular.module("indexApp",[
     'ui.router',
     'indexApp.controllers',
-    'indexApp.indexService',
-    'indexApp.servicesNew'
+    'indexApp.indexService'
+    //'indexApp.mainService'
 ]);
 /**
  * 由于整个应用都会和路由打交道，所以这里把$state和$stateParams这两个对象放到$rootScope上，方便其它地方引用和注入。
@@ -43,7 +43,7 @@ indexApp.config(function ($stateProvider, $urlRouterProvider,$httpProvider) {
     $stateProvider
         .state('/', {
             url: '/',
-            templateUrl: '/views/home/home.html',
+            templateUrl: '/views/nice-admin/index.html',
             controller:"indexController"
         })
         .state('sidebar', {

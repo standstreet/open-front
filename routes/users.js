@@ -45,7 +45,7 @@ router.post("/",function(req,res,next){
         "status":"",
         "msg":""
     }
-    console.log("routers/user.js->处理登陆的router.post:"+JSON.stringify(user));
+    console.log("routers/user.js->处理登陆的router.post:");
     if(user.loginName=="admin"&&user.password=="admin"){
         msg={
             "status":"200",
