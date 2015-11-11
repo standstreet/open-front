@@ -12,13 +12,14 @@ loginApp.controller("LoginController",function($scope,$location,$window,user,$co
         password:""
     }
     $scope.login=function(){
+        console.log("LoginController.js登录:"+JSON.stringify($scope.user))
         user.login($scope.user).then(function(data){
             console.log("LoginController"+JSON.stringify($cookies.user));
             console.log("LoginController登陆成功！");
             alert("LoginController.js->登陆成功");
-            $window.location="/#/";
+            $window.location="/";
         },function(err){
-            alert(err.msg);
+            alert("LoginController.js:"+JSON.stringify(err));
             console.log("LoginController登陆失败!")
         })
     }
